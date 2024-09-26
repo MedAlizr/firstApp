@@ -1,11 +1,14 @@
 <html>
 <head>
 <body>
-    <a >Home</a>
+    
+    <a href="{{ path('app_home')}}">Home</a>
     <a href="{{ path('app_contact')}}">Contacts</a>
-    <a href="{{ path('app_author_show')}}">Author</a>
+    <a >Author</a>
     <a href="{{ path('app_author_list')}}">Authors list</a>
-<h1>Hello :D</h1>
+    
+<h1>Author's Name : {{authorName}}</h1>
+<h1>Author's Email : {{authorEmail}}</h1>
 </body>
 </head>
 </html>

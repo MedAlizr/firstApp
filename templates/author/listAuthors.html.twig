@@ -1,0 +1,32 @@
+<html>
+<head>
+<body>
+    {% set total_books = 0 %}
+    {% if authorList is not empty and authorList is defined %}
+    <a href="{{ path('app_home')}}">Home</a>
+    <a href="{{ path('app_contact')}}">Contacts</a>
+    <a href="{{ path('app_author_show')}}">Author</a>
+    <a >Authors list</a>
+    
+<h1>
+  <table>
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Book Number</th>
+    </tr>
+    <tr {% for author in authorList %}>
+        {% set total_books = total_books + author.nbrBooks %}
+        <td>{{author.authorName}}</td>
+        <td><img src="{{asset(author.picture)}}"></td>
+        <td>{{author.nbrBooks}}</td>
+    </tr {% endfor %}>
+  </table>
+<h1>The number of authors : {{authorList|length}}</h1>
+<h1>Total number of books: {{total_books}}</h1>
+{% else %}
+<h1>List is undefined</h1>
+{% endif %}
+</body>
+</head>
+</html>
