@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Book number</th>
+                <th>address</th>
+            </tr>
+            <tr  {% for author in list %}>
+                <td>{{author.name}}</td>
+                <td>{{author.email}}</td>
+                <td>{{author.nbrBooks}}</td>
+                <td>{{author.address}}</td>
+            </tr {% endfor %}>
+        </table>
+    </body>
+</html>
