@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+<h1>Add new book</h1>
+
+{{ form_start(form) }}
+<table>
+<tr>
+<td>Book Name</td>
+<td>{{ form_widget(form.Title) }}</td>
+</tr>
+<tr>
+<td>Page Number</td>
+<td>{{ form_widget(form.nbr_Page) }}</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>{{ form_widget(form.Author) }}</td>
+</tr>
+</table>
+{{ form_end(form) }}
+</body>
+</html>
